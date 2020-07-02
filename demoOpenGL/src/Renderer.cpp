@@ -29,6 +29,6 @@ void Renderer::Draw(const VertexArray& vao, const IndexBuffer& ibo, const Shader
 
 void Renderer::Clear() const
 {
-	GLCall( glClear(GL_COLOR_BUFFER_BIT) );
+	GLCall( glClear(GL_COLOR_BUFFER_BIT) );			//注意这个东西不能在同一个循环里面调用两次，不然会失效
 	GLCall( glClearColor(0.1f, 0.3f, 0.3f, 1.0f) );
 }
