@@ -25,12 +25,12 @@ namespace test {
 		//还有一个要考虑的问题是作用域的问题，假如是构造函数内进行创建对象，在离开构造函数后就会被析构掉
 
 		
-		std::unique_ptr<VertexArray > m_VAO;
-		std::unique_ptr<VertexBuffer> m_VBO;
-		std::unique_ptr<IndexBuffer > m_IBO;
-		std::unique_ptr<Shader > m_Shader;
+		std::vector<std::unique_ptr<VertexArray >> m_VAOs;
+		std::vector<std::unique_ptr<VertexBuffer>> m_VBOs;
+		std::vector<std::unique_ptr<IndexBuffer >> m_IBOs;
+		std::vector<std::unique_ptr<Shader >> m_Shaders;
 
-		std::unique_ptr<Texture> m_Texture;
+		std::vector<std::unique_ptr<Texture>> m_Textures;
 
 		glm::vec3 m_TranslationA;
 		glm::vec3 m_TranslationB;
