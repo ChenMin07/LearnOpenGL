@@ -19,6 +19,7 @@ namespace test {
 
 		void OnRender() override;
 		void OnImGuiRender() override;
+		void OnUpdate(float deltaTime) override;
 
 	private:	
 		//这里使用指针是因为这些对象可能需要初始化参数，但是这些参数在构造函数里面，所以在进入构造函数的主体之前先不构造这些对象
@@ -34,6 +35,9 @@ namespace test {
 
 		glm::vec3 m_TranslationA;
 		glm::vec3 m_TranslationB;
+		
+		glm::vec3 m_PositionA;
+		glm::vec3 m_PositionB;
 
 		glm::mat4 m_Projection;
 	};
